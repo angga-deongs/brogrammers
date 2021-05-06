@@ -1,0 +1,14 @@
+extends ../templates/master.pug
+
+//- Head
+block siteHeader
+    -
+        siteTitle   = "Home";
+        menuActive  = "home";
+        page        = "home";
+
+//- Body
+block siteContent
+    include ../layouts/header.pug
+    include home/all.pug
+    include ../layouts/footer.pug

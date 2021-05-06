@@ -1,0 +1,29 @@
+/* -------------------------------------------------------------------------- */
+/* search                                                                     */
+/* -------------------------------------------------------------------------- */
+
+.ax-practice-search {
+  padding-bottom: 500px;
+  &__form {
+    margin-bottom: 12px;
+  }
+  &__result {
+    display: none;
+    @include border-radius(8px);
+    li {
+      padding: 4px 0;
+    }
+    a {
+      background-color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      display: block;
+      @include box-shadow(0 2px 4px rgba(0,0,0,0.1));
+      @include border-radius(8px);
+      @include transition(all .3s ease);
+      &:hover {
+        @include transform(translateY(-4px));
+      }
+    }
+  }
+}

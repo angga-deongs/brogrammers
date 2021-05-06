@@ -1,0 +1,25 @@
+//sorting-order
+
+.ax-practice
+  .container
+    h2.ax-practice__title Latihan 3
+    ul.ax-practice__list
+      li sorting dari nilai terendah
+      li sorting dari nilai tertinggi
+      li sorting default
+    .sorting-order
+      .row
+        .col
+          p Sorting Order
+          ul#dataSiswaList
+        .col
+          form(action="")
+            select#dataSiswa.form-control(name="siswa")
+              option(value="1") 1
+              option(value="2") 2
+              option(value="3" selected="selected") 3
+              option(value="4") 4
+            select#dataSort.form-control(name="sort")
+              option(value="") Ori
+              option(value="asc") Terbesar
+              option(value="desc") Terkecil

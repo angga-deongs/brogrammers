@@ -1,0 +1,28 @@
+//product-currency
+
+.ax-practice
+  .container
+    h2.ax-practice__title Latihan 1
+    ul.ax-practice__list
+      li Menambahkan Rp
+      li Menambahkan titk (.)
+      li Menghitung Diskon
+      li Hitung Barang
+    .product-currency
+      .row
+        .col
+          form(action="")
+            .form-group
+              input#hargaBarang.form-control(type="text" placeholder="input harga barang")/
+            .form-group
+              input#diskonBarang.form-control(type="text" placeholder="input diskon barang")/
+            .form-group
+              button#hitungBarang.btn.btn-success.btn-block(type="button") Hitung barang
+        .col
+          .hitung
+            p Harga Barang:
+              span#hitungHarga
+            p Diskon:
+              span#hitungDiskon
+            p Harga yang sebenarnya:
+              span#hitungHargaSebenarnya

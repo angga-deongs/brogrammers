@@ -1,0 +1,88 @@
+//tab-accordion
+.ax-practice
+  .container
+    h2.ax-practice__title Latihan 11
+    ul.ax-practice__list
+      li Membuat Accordion didalam tab
+    .tab-accordion
+      .tabs.js-tab
+        ul.tab-control
+          li
+            button(type="button", data-target="home") Home
+          li
+            button(type="button", data-target="about") About
+          li
+            button(type="button", data-target="contact") Contact
+        .tab-content
+          .tab-panel#home
+            .accordion.js-accordion
+              .accordion-item
+                .accordion-header
+                  button.accordion-button(type="button")
+                    i.bi.bi-chevron-down
+                    | tabs 1 accordion 1
+                .accordion-collapse
+                  .accordion-body
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minus doloribus aliquid dignissimos autem asperiores aut explicabo nisi quod sequi rerum quasi, sapiente fugiat voluptatibus assumenda nobis, ipsam aliquam dolorum.
+              .accordion-item
+                .accordion-header
+                  button.accordion-button(type="button")
+                    i.bi.bi-chevron-down
+                    | tabs 1 accordion 2
+                .accordion-collapse
+                  .accordion-body
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minus doloribus aliquid dignissimos autem asperiores aut explicabo nisi quod sequi rerum quasi, sapiente fugiat voluptatibus assumenda nobis, ipsam aliquam dolorum.
+          .tab-panel#about
+            .accordion.js-accordion
+              .accordion-item
+                .accordion-header
+                  button.accordion-button(type="button")
+                    i.bi.bi-chevron-down
+                    | tabs 2 accordion 1
+                .accordion-collapse
+                  .accordion-body
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minus doloribus aliquid dignissimos autem asperiores aut explicabo nisi quod sequi rerum quasi, sapiente fugiat voluptatibus assumenda nobis, ipsam aliquam dolorum.
+              .accordion-item
+                .accordion-header
+                  button.accordion-button(type="button")
+                    i.bi.bi-chevron-down
+                    | tabs 2 accordion 2
+                .accordion-collapse
+                  .accordion-body
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minus doloribus aliquid dignissimos autem asperiores aut explicabo nisi quod sequi rerum quasi, sapiente fugiat voluptatibus assumenda nobis, ipsam aliquam dolorum.
+          .tab-panel#contact
+            .accordion.js-accordion
+              .accordion-item
+                .accordion-header
+                  button.accordion-button(type="button")
+                    i.bi.bi-chevron-down
+                    | tabs 3 accordion 1
+                .accordion-collapse
+                  .accordion-body
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minus doloribus aliquid dignissimos autem asperiores aut explicabo nisi quod sequi rerum quasi, sapiente fugiat voluptatibus assumenda nobis, ipsam aliquam dolorum.
+              .accordion-item
+                .accordion-header
+                  button.accordion-button(type="button")
+                    i.bi.bi-chevron-down
+                    | tabs 3 accordion 2
+                .accordion-collapse
+                  .accordion-body
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minus doloribus aliquid dignissimos autem asperiores aut explicabo nisi quod sequi rerum quasi, sapiente fugiat voluptatibus assumenda nobis, ipsam aliquam dolorum.
+
+.accordion.js-accordion
+  .accordion-item
+    .accordion-header
+      button.accordion-button(type="button")
+        i.bi.bi-chevron-down
+        | tabs 1 accordion 1
+    .accordion-collapse
+      .accordion-body
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minus doloribus aliquid dignissimos autem asperiores aut explicabo nisi quod sequi rerum quasi, sapiente fugiat voluptatibus assumenda nobis, ipsam aliquam dolorum.
+  .accordion-item
+    .accordion-header
+      button.accordion-button(type="button")
+        i.bi.bi-chevron-down
+        | tabs 1 accordion 2
+    .accordion-collapse
+      .accordion-body
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minus doloribus aliquid dignissimos autem asperiores aut explicabo nisi quod sequi rerum quasi, sapiente fugiat voluptatibus assumenda nobis, ipsam aliquam dolorum.

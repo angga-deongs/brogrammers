@@ -1,0 +1,102 @@
+include ../config/config.pug
+
+doctype html
+html(lang="en" class="sr")
+    block siteHeader
+    head
+        |!{""}
+        |!{""}
+        // meta 
+        meta(charset="UTF-8")/
+        meta(http-equiv="refresh", content=timeRefresh)/
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")/
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui")/
+        |!{""}
+        |!{""}
+        // primary information
+        title #{siteTitle + " "+ suffixSiteTitle}
+        meta(name="description", content=siteTitle + " "+ suffixSiteDescription)/
+        meta(name="keywords", content=siteTitle + ", " + suffixSiteKeywords)/
+        meta(name="author" content=author)/
+        meta(name="copyright" content=copyright)/
+        base(href="./")/
+        |!{""}
+        |!{""}
+        // ie fix for html5 tags
+        //[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]
+        |!{""}
+        |!{""}
+        if ogFacebook.enable
+            // og facebook general
+            meta(property="og:locale", content="en_US")/
+            meta(property="og:type", content=ogFacebook.type)/
+            meta(property="og:title", content=siteTitle + " "+ suffixSiteTitle)/
+            meta(property="og:description", content=siteTitle + " "+ suffixSiteDescription)/
+            meta(property="og:url", content=siteURL)/
+            meta(property="og:site_name", content=siteDomain)/
+            meta(property="og:image", content=ogFacebook.image)/
+            meta(property="og:image:type", content=ogFacebook.imageType)/
+        |!{""}
+        |!{""}
+        if twitterCard.enable
+            // twitter card
+            meta(name="twitter:card" content=twitterCard.sizeCard)/
+            meta(name="twitter:title", content=siteTitle + " "+ suffixSiteTitle)/
+            meta(name="twitter:description", content=siteTitle + " "+ suffixSiteDescription)/
+            meta(name="twitter:site", content=twitterCard.twitterId)/
+            meta(name="twitter:site:id", content=twitterCard.twitterId)/
+            meta(name="twitter:domain", content=siteDomain)/
+            meta(name="twitter:image:src", content=twitterCard.image)/
+            meta(name="twitter:creator", content=twitterCard.twitterId)/
+        |!{""}
+        |!{""}
+        // favicon 
+        link(rel="shortcut icon" href=icons.webFavicon)/
+        |!{""}
+        |!{""}
+        // android add to home screen 
+        link(rel="manifest" href=manifest)/
+        meta(name="mobile-web-app-capable" content="yes")/
+        meta(name="theme-color" content=siteTheme)/
+        link(rel="icon" type="image/png" sizes="16x16" href=icons.homescreen.android.s16)/
+        link(rel="icon" type="image/png" sizes="32x32" href=icons.homescreen.android.s32)/
+        link(rel="icon" type="image/png" sizes="96x96" href=icons.homescreen.android.s96)/
+        link(rel="icon" type="image/png" sizes="144x144" href=icons.homescreen.android.s144)/
+        link(rel="icon" type="image/png" sizes="192x192" href=icons.homescreen.android.s192)/
+        |!{""}
+        |!{""}
+        // windows microsoft 
+        meta(name="msapplication-TileColor" content=siteTheme)/
+        meta(name="msapplication-TileImage" content=icons.homescreen.microsoft.s144)/
+        meta(name="theme-color" content=siteTheme)/
+        |!{""}
+        |!{""}
+        // apple add to home screen 
+        meta(name="apple-mobile-web-app-capable" content="yes")/
+        meta(name="apple-mobile-web-app-status-bar-style" content=siteTheme)/
+        link(rel="apple-touch-icon" href=icons.homescreen.iOS.default)/
+        link(rel="apple-touch-icon" sizes="57x57" href=icons.homescreen.iOS.s57)/
+        link(rel="apple-touch-icon" sizes="60x60" href=icons.homescreen.iOS.s60)/
+        link(rel="apple-touch-icon" sizes="72x72" href=icons.homescreen.iOS.s72)/
+        link(rel="apple-touch-icon" sizes="76x76" href=icons.homescreen.iOS.s76)/
+        link(rel="apple-touch-icon" sizes="114x114" href=icons.homescreen.iOS.s114)/
+        link(rel="apple-touch-icon" sizes="120x120" href=icons.homescreen.iOS.s120)/
+        link(rel="apple-touch-icon" sizes="144x144" href=icons.homescreen.iOS.s144)/
+        link(rel="apple-touch-icon" sizes="152x152" href=icons.homescreen.iOS.s152)/
+        link(rel="apple-touch-icon" sizes="180x180" href=icons.homescreen.iOS.s180)/
+        link(rel="apple-touch-startup-image" href=icons.homescreen.iOS.default)/
+        |!{""}
+        |!{""}
+        // style 
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")/
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css")/
+        link(rel="stylesheet", href=cssMain)/
+        |!{""}
+        |!{""}
+    |!{""}
+    |!{""}
+    body
+        block siteContent
+        // script
+        script(src=jsVendor)
+        script(src=jsMain)

@@ -1,0 +1,82 @@
+/* -------------------------------------------------------------------------- */
+/* tabs                                                                       */
+/* -------------------------------------------------------------------------- */
+
+.tab-accordion {
+  .tab-control {
+    font-size: 0;
+    margin: 0;
+    li {
+      display: inline-block;
+      &.active {
+        button {
+          background-color: #0d6efd;
+          color: #fff;
+        }
+      }
+    }
+    button {
+      border: none;
+      outline: none;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 16px;
+    }
+  }
+  .tab-panel {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  .accordion {
+    padding-top: 20px;
+  }
+  .accordion-item {
+    &.active {
+      .accordion-header {
+        i {
+          @include transform(translateY(-42%) rotate(0));
+        }
+      }
+      .accordion-button {
+        background-color: #0d6efd;
+      }
+    }
+  }
+  .accordion-collapse {
+    display: none;
+  }
+  .accordion-header {
+    position: relative;
+    button {
+      position: relative;
+      z-index: 1;
+    }
+    i {
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      z-index: 1;
+      color: #fff;
+      @include transition(all .3s ease);
+      @include transform(translateY(-50%) rotate(-180deg));
+    }
+  }
+  .accordion-button {
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    padding: 20px;
+    background-color: #6c757d;
+    color: #fff;
+  }
+  .accordion-body {
+    padding: 20px;
+    background-color: #efefef;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

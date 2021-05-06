@@ -1,0 +1,114 @@
+/* -------------------------------------------------------------------------- */
+/* popup                                                                      */
+/* -------------------------------------------------------------------------- */
+
+.team {
+  margin-left: -16px;
+  margin-right: -16px;
+  &__list {
+    @include clearfix;
+  }
+  &__item {
+    float: left;
+    width: 25%;
+    padding: 0 16px 40px;
+    cursor: pointer;
+  }
+  &__img {
+    height: 180px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      @include  border-radius(20px 20px 0 0)
+    }
+  }
+  &__text {
+    padding-top: 20px;
+  }
+  &__name {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  &__position {
+    margin-bottom: 0;
+  }
+}
+
+.popup-team {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  cursor: pointer;
+  @include transition(all .3s ease);
+  @include transition-delay(.5s);
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    @include transition(all .3s ease);
+    @include transition-delay(0);
+    .popup-team__box {
+      left: 50%;
+      top: 50%;
+      opacity: 1;
+      @include transform(translate(-50%, -50%));
+    }
+  }
+  &__box {
+    cursor: default;
+    background-color: color(white);
+    padding: 60px 40px 40px;
+    position: absolute;
+    width: 800px;
+    top: 60%;
+    left: 50%;
+    opacity: 0;
+    height: 720px;
+    overflow: auto;
+    @include transition(all .3s ease);
+    @include transition-delay(.1s);
+    @include border-radius(20px);
+    @include transform(translate(-50%, -50%));
+  }
+  &__img {
+    height: 400px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__name {
+    padding-top: 20px;
+    margin-bottom: 0;
+  }
+  &__position {
+    margin-bottom: 24px;
+  }
+  &__socmed {
+    a {
+      color: #000;
+      text-decoration: underline;
+    }
+  }
+  &__close {
+    float: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+.close {
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,44 @@
+/* -------------------------------------------------------------------------- */
+/* transition                                                                 */
+/* -------------------------------------------------------------------------- */
+
+@mixin transition($value) {
+    -webkit-transition:$value;
+    -moz-transition:$value;
+    -ms-transition:$value;
+    transition:$value;
+}
+
+@mixin transition-2($value, $value2) {
+    -webkit-transition:$value, $value2;
+    -moz-transition:$value, $value2;
+    -ms-transition:$value, $value2;
+    transition:$value, $value2;
+}
+
+@mixin transition-3($value, $value2, $value3) {
+    -webkit-transition:$value, $value2, $value3;
+    -moz-transition:$value, $value2, $value3;
+    -ms-transition:$value, $value2, $value3;
+    transition:$value, $value2, $value3;
+}
+
+@mixin transition-4($value, $value2, $value3, $value4) {
+    -webkit-transition:$value, $value2, $value3, $value4;
+    -moz-transition:$value, $value2, $value3, $value4;
+    -ms-transition:$value, $value2, $value3, $value4;
+    transition:$value, $value2, $value3, $value4;
+}
+@mixin transition-5($value, $value2, $value3, $value4, $value5) {
+    -webkit-transition:$value, $value2, $value3, $value4, $value5;
+    -moz-transition:$value, $value2, $value3, $value4, $value5;
+    -ms-transition:$value, $value2, $value3, $value4, $value5;
+    transition:$value, $value2, $value3, $value4, $value5;
+}
+
+@mixin transition-delay($value) {
+    -webkit-transition-delay:$value;
+    -moz-transition-delay:$value;
+    -ms-transition-delay:$value;
+    transition-delay:$value;
+}

@@ -1,0 +1,60 @@
+/* -------------------------------------------------------------------------- */
+/* button                                                                     */
+/* -------------------------------------------------------------------------- */
+
+.button {
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 22px;
+    outline: 0;
+    font-family: $mabrypro;
+    cursor: pointer;
+    @include border-radius(24px);
+    @include transition(all .3s ease);
+    &.button-white {
+        background-color: color(white);
+        color: color(tosca);
+        border: 1px solid color(tosca);
+        &:hover {
+            background-color: color(tosca);
+            color: color(white);
+            border: 1px solid color(white);
+        }
+    }
+    &.button-white-transparent {
+        border: 1px solid color(white);
+        color: color(white);
+        &:hover {
+            background-color: color(white);
+            color: color(tosca);
+            border: 1px solid color(tosca);
+        }
+    }
+    &.button-gray-transparent {
+        border: 1px solid color(gray, 1);
+        color: color(gray, 1);
+        &:hover {
+            background-color: color(white);
+            color: color(tosca);
+            border: 1px solid color(tosca);
+        }
+    }
+    &.button-tosca-transparent {
+        border: 1px solid color(tosca);
+        color: color(tosca);
+        &:hover {
+            background-color: color(tosca);
+            color: color(white);
+        }
+    }
+    &.button-tosca {
+        background-color: color(tosca);
+        border: 1px solid color(tosca);
+        color: color(white);
+        &:hover {
+            background-color: color(white);
+            color: color(dark);
+            border: 1px solid color(dark);
+        }
+    }
+}

@@ -1,0 +1,29 @@
+/* -------------------------------------------------------------------------- */
+/* scroll                                                                     */
+/* -------------------------------------------------------------------------- */
+
+@mixin scroll-x {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        display: none;
+        width: 0;
+    }
+}
+
+@mixin scroll-y {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        display: none;
+        width: 0;
+    }
+}

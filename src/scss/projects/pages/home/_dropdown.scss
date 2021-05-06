@@ -1,0 +1,61 @@
+/* -------------------------------------------------------------------------- */
+/* ax-practice-dropdown                                                       */
+/* -------------------------------------------------------------------------- */
+
+.ax-practice-dropdown {
+  ul {
+    background-color: #fff;
+    > li {
+      display: inline-block;
+      position: relative;
+      > a, button {
+        padding: 8px 20px;
+      }
+      &.has-dropdown {
+        &.active {
+          ul {
+            opacity: 1;
+            visibility: visible;
+            @include transform(translateY(0));
+          }
+        }
+        > a, button {
+          &::after {
+            content: '\2193';
+            position: absolute;
+            right: 8px;
+          }
+        }
+        > button {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          color: #007bff;
+          @include transition(all .3s ease);
+          &:hover {
+            color: #0056b3;
+          }
+        }
+      }
+      ul {
+        position: absolute;
+        left: 0;
+        top: 40px;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        @include transform(translateY(12px));
+        @include transition(all .3s ease);
+        li {
+          display: block;
+          a {
+            padding: 8px 20px;
+          }
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}

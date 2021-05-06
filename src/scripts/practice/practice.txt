@@ -1,0 +1,96 @@
+
+selector.width(): // lebar element/content
+selector.height(): // tinggi element/content
+selector.innerHeight(); // tinggi element/content + padding
+selector.outerWidth(); // lebar element/content + padding + border
+selector.outerHeight(); // tinggi element/content + padding + border
+selector.outerWidth(true); // lebar element/content + padding + border + margin
+selector.outerHeight(true); // tinggi element/content + padding + border + margin
+
+// setter
+selector.width(n): // lebar element/content
+selector.height(n): // tinggir element/content
+
+
+jQuery Traversing
+--
+
+jQuery Traversing - Ancestors
+--
+selector.parent(); // parentnya 1 tingkat diatas selector
+selector.parent(selectorParent); // parentnya 1 tingkat diatas selector berdasarkan selectorParent
+selector.parents(); // all parent diatas selector
+selector.parents(selectorParent); // parentnya 1 tingkat atau lebih diatas selector berdasarkan selectorParent
+selector.parentsUntil(selectorParent); // menyeleksi element diantara selector dan selectorParent
+
+jQuery Traversing - Descendants
+--
+selector.children(); // element satu tingkat dibawah selector
+selector.children(selectorChild); // element satu tingkat dibawah selector
+selector.find(selectorChild); // child satu tingkat atau lebih dari selector
+
+jQuery Traversing - Siblings
+--
+selector.siblings(); // semua element sebelum dan sesudah selector
+selector.siblings(selectorSiblings); // semua element sebelum dan sesudah sesuai selectorSiblings
+
+selector.next(); // 1 element setelah element selector
+selector.next(selectorNext); // 1 element setelah element selector sesuai selectorNext
+selector.nextAll(); // semua element setelah element selector
+selector.nextAll(selectorNextAll); // semua element setelah element selector sesuai selectorNextAll
+selectorNextUntil(); // menyeleksi element diantara selector - selector terakhir
+selectorNextUntil(selectorNextUntil); // menyeleksi element diantara selector - selectorNextUntil
+
+selector.prev(); // 1 element sebelum element selector
+selector.prev(selectorPrev); // 1 element sebelum element selector sesuai selectorPrev
+selector.prevAll(); // semua element sebelum element selector
+selector.prevAll(selectorPrevAll); // semua element sebelum element selector sesuai selectorPrevAll
+selectorPrevUntil(); // menyeleksi element diantara selector - selector until
+selectorPrevUntil(selectorPrevUntil); // menyeleksi element diantara selector - selectorPrevUntil
+
+jQuery Traversing - Filtering
+--
+selector.first(); // element index 0 sesuai selector
+selector.last(); // element index terakhir sesuai selector
+selector.eq(index): // element sesuai index dari seluruh element windows
+selector.index(); // get number index dari seluruh element windows
+selector.filter(selectorFilter): // element sesuai selector filter
+selector.not(selectorNot); // element yang bukan selectorNot
+
+AJAX Asynchronous Javascript and XML
+
+jQuery - AJAX load() method (HTML Tag / Plain Text)
+
+// Running on web server
+$(selector).load(URL|File, data, function(){ statusTxt, xhr}){
+
+}
+
+URL|file : isi html tag plain Text
+data: {key: value, key: value}
+function(responseTxt, statusTxt, xhr){}, callback
+
+
+jQuery - Ajax get() and post() Methods
+
+get(): Mengambil data dari Back-end ke Front-end
+
+
+
+jQuery - The noConflict() Method
+---
+supaya tidak konflik dengan frameworks
+
+
+// before
+$('.js-card)
+
+// after
+jQUery('.js-card')
+
+
+
+&::before,
+&::after {
+  content: attr(attribute-name)
+}

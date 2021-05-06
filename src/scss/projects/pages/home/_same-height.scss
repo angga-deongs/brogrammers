@@ -1,0 +1,18 @@
+/* -------------------------------------------------------------------------- */
+/* same-height                                                                */
+/* -------------------------------------------------------------------------- */
+
+.same-height {
+  .card-list {
+    @include clearfix;
+  }
+  .card-item {
+    width: 33.3333333%;
+    float: left;
+    background-color: #d4edda;
+    p {
+      padding: 24px;
+      margin-bottom: 0;
+    }
+  }
+}
