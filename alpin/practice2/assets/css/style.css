@@ -1,0 +1,39 @@
+.main {
+  position: relative;
+}
+.slide-container {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 0;
+}
+img {
+  max-width: 100%;
+}
+
+.slide-box {
+  white-space: nowrap;
+  position: relative;
+}
+
+.slide-item {
+  display: inline-block;
+  width: 400px;
+}
+
+.js-slide-nav {
+  position: absolute;
+  top: 300px;
+  left: 45%;
+  background-color: green;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+button.slide-next {
+  transform: translateX(80px);
+}

@@ -1,0 +1,10 @@
+Spec Tooltips
+--
+
+1. data-placements & data-title
+2. selector data-placements top merubah arah tooltips sesuai selector yang di ubah
+3. use 
+::after,
+::before {
+  content: attr('attribute-data');
+}
