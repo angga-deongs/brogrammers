@@ -8,3 +8,16 @@ Spec Tooltips
 ::before {
   content: attr('attribute-data');
 }
+
+
+Spec owl caraousel
+--
+
+[] Product card OCBC
+  - navigation : true
+  - dot : true
+  - autoPlay : false
+[] Main Banner
+  - navigation : false
+  - dot : false
+  - autoPlay : true
