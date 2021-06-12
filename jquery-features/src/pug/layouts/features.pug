@@ -1,0 +1,11 @@
+.section-features
+  .container
+    .section-features__wrapper
+      .section-features__content
+        h2.section-title Lorem ipsum dolor sit amet.
+        //- card list
+        .card-features.owl-carousel.js-features
+          each val in data
+            -
+              data = val
+            include ../components/features.pug

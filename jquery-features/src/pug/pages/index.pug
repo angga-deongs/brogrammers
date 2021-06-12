@@ -1,0 +1,10 @@
+extends ../templates/default.pug
+
+block siteHead
+  -
+    menu = 'home'
+    siteTitle = 'Home'
+
+block siteContent
+  include home/banner.pug
+  include home/features.pug

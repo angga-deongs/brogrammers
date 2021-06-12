@@ -1,0 +1,10 @@
+dist
+node_modules
+gulpfile.babel.js
+.json
+.babelrc
+.browserslistrc
+build
+npm-debug.log
+.env
+.DS_Store
