@@ -1,0 +1,150 @@
+.footer {
+  background-color: $white-medium;
+  padding: 80px 0;
+  &__logo {
+    float: left;
+    width: 20%;
+    line-height: 1.2;
+    font-weight: 300;
+    color: $white;
+    @include extra-small {
+      width: 100%;
+      padding: 0 20px;
+      margin: 0 0 20px;
+    }
+    &-img {
+      display: inline-block;
+      margin-bottom: 25px;
+      height: 48px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__wrapper {
+    float: right;
+    width: 80%;
+    padding-left: 40px;
+    @include small {
+      float: left;
+    }
+    @include extra-small {
+      padding: 0;
+    }
+  }
+  &__menu {
+    float: left;
+    width: 20%;
+    padding: 0;
+    margin: 0;
+    color: $black;
+    @include small {
+      margin-top: 20px;
+    }
+    @include extra-small {
+      width: 100%;
+      padding: 0 20px;
+    }
+    &:first-child{
+      width: 40%;
+      @include extra-small {
+        width: 100%;
+      }
+    }
+    &-item {
+      list-style: none;
+      margin: 0 0 20px;
+      &:last-child {
+        margin: 0;
+      }
+      @include extra-small {
+        width: 100%;
+      }
+    }
+    &-link {
+      display: inline-block;
+      text-decoration: none;
+      font-size: $f-xs;
+      font-weight: 400;
+      color: #4a4a4a;
+      &::after {
+        margin-top: 4px;
+        content: '';
+        display: block;
+        background-color: $secondary;
+        height: 1px;
+        width: 100%;
+        transition: all 400ms ease;
+        transform: scaleX(0);
+        transform-origin: center;
+      }
+      &:hover {
+        color: $secondary;
+        &::after {
+          content: '';
+          width: 100%;
+          transform: scaleX(1);
+          transform-origin: center;
+        }
+      }
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+    &-title {
+      text-transform: uppercase;
+      font-size: $f-sm;
+      line-height: 1.2;
+      font-weight: 600;
+      color: $black;
+      margin: 0 0 16px;
+    }
+    &-desc {
+      font-size: $f-xs;
+      padding-right: 24px;
+      margin: 0 0 20px;
+      color: #4a4a4a;
+      &:last-child {
+        margin: 0;
+      }
+      @include extra-small {
+        width: 100%;
+        display: inline-block;
+      }
+    }
+    &-icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: 16px;
+      height: 16px;
+      font-size: $f-sm;
+      margin-right: 10px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-size: $f-xs;
+    font-weight: 400;
+    color: #4a4a4a;
+    transition: color 300ms ease;
+  }
+  .facebook:hover {
+    color: #3b5998;
+  }
+  .instagram:hover {
+    color: #ef426f;
+  }
+  .twitter:hover {
+    color: #00acee;
+  }
+  .whatsapp:hover {
+    color: #25d366;
+  }
+  &__copy-right {
+    font-size: 12px;
+    margin: 0;
+    color: #999;
+  }
+}

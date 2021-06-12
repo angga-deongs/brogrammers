@@ -1,0 +1,40 @@
+.owl-carousel {
+  display: block;
+}
+
+.card__slider.owl-carousel {
+  position: static;
+  .owl-item {
+    &:last-child .card {
+      border-radius: 0 8px 8px 0;
+    }
+  }
+  .owl-nav {
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      bottom: 180px;
+      width: 50px;
+      height: 50px;
+      font-size: $f-sm;
+      border-radius: 50%;
+      background-color: $primary;
+      color: #fff;
+      z-index: 4;
+      opacity: 1;
+      transform: scale(1);
+      box-shadow: 4px 0 20px -5px rgba(0,0,0,.4);
+      transition: all 400ms ease 0ms;
+    }
+    .owl-prev {
+      left: -24px;
+    }
+    .owl-next {
+      right: 24px;
+    }
+    .disabled {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+}

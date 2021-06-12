@@ -1,0 +1,87 @@
+.tooltips {
+  position: relative;
+  &::before,
+  &::after {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms ease;
+  }
+  &::before {
+    content: attr(data-title);
+    width: 120px;
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    border-radius: 6px;
+    font-size: $f-xs;
+    padding: 8px;
+  }
+  &::after {
+    font-family: 'brogrammers-icon';
+    color: $black;
+    // border: 5px solid;
+  }
+  &:hover {
+    &::before,
+    &::after {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+[data-placements] {
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: 4;
+  }
+}
+[data-placements="top"] {
+  &::before {
+    bottom: 60px;
+    left: 15%;
+  }
+  &::after {
+    content: "\e904";
+    bottom: 48px;
+    left: 45%;
+    // border-color: $black transparent transparent transparent;
+  }
+}
+[data-placements="bottom"] {
+  &::before {
+    top: 60px;
+    left: 15%;
+  }
+  &::after {
+    content: "\e908";
+    top: 48px;
+    left: 45%;
+    // border-color: transparent transparent $black transparent;
+  }
+}
+[data-placements="left"] {
+  &::before {
+    top: 6px;
+    left: -150px;
+  }
+  &::after {
+    content: "\e906";
+    top: 14px;
+    left: -18px;
+    // border-color: transparent transparent transparent $black;
+  }
+}
+[data-placements="right"] {
+  &::before {
+    top: 6px;
+    right: -150px;
+  }
+  &::after {
+    content: "\e905";
+    top: 14px;
+    right: -18px;
+    // border-color: transparent $black transparent transparent;
+  }
+}

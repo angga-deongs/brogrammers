@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $f-fm;
+  background-color: $white;
+  color: $black;
+  font-weight: normal;
+  font-style: normal;
+  font-size: $f-sm;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: $container;
+  padding: 0 16px;
+  margin: 0 auto;
+  @include large { 
+    padding: 0 32px;
+  }
+  @include medium { 
+    padding: 0 24px;
+  }
+  @include small { 
+    padding: 0 16px;
+  }
+}
+
+.hold-transition * {
+  transition: none !important;
+}
+
+.rm-scroll {
+  overflow-y: hidden;
+}
+
+.row {
+  margin-left: -12px;
+  margin-right: -12px;
+  @include clearfix;
+}

@@ -1,0 +1,13 @@
+.modal(data-modal=modal.target)
+  .modal__container
+    .modal__box
+      .modal__content
+        .modal__header
+          h2.modal__title !{modal.title}
+          button.modal__close.js-hide-modal(type='button')
+            i.bro-close
+        .modal__body
+          .modal__img
+            img(src=modal.image alt=modal.title)/
+          .modal__text
+            p.modal__desc !{modal.desc}

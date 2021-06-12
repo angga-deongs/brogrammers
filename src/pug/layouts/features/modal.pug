@@ -1,0 +1,13 @@
+.main-section(id='modal')
+  .container
+    .main-section__head
+      h2.main-section__title Features Modal
+    .main-features__wrapper
+      .main-features__row
+        button.btn.btn--primary(type='button' class='js-modal' data-target='modal-1') modal 1
+      .main-features__row
+        button.btn.btn--primary(type='button' class='js-modal' data-target='modal-2') modal 2
+
+each val in modal
+  - modal = val;
+  include ../../components/modal.pug

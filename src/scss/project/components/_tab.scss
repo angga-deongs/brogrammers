@@ -1,0 +1,100 @@
+.tabs {
+  &__content {
+    width: 100%;
+    background-color: $white;
+  }
+  &__control {
+    position: relative;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .1), 0 3px 14px 3px rgba(0, 0, 0, .1), 0 4px 5px 0 rgba(0, 0, 0, .1);
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      @include small {
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-x: auto;
+        padding: 0 16px;
+      }
+      .show-tabs {
+        color: $primary;
+        font-weight: 600;
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+    &-item {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      font-weight: 600;
+      margin: 0;
+      color: $grey;
+      font-size: 20px;
+      padding: 18px 0;
+      margin-right: 48px;
+      cursor: pointer;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      user-select: none;
+      &:last-child {
+        margin-right: 0;
+      }
+      @include small {
+        margin-right: 32px;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        display: block;
+        background-color: $primary;
+        height: 3px;
+        width: 100%;
+        border-radius: 8px;
+        transform: scaleX(0);
+        transition: transform 400ms ease;
+      }
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+  &__pane {
+    padding: 40px 0;
+    &-item {
+      display: none;
+    }
+    &-head {
+      padding-bottom: 24px;
+    }
+    &-title {
+      font-size: $f-p;
+      margin: 0;
+    }
+    .show-tabs {
+      display: block;
+      animation: tab-pane 400ms ease-in-out 200ms both;
+    }
+    &-body {
+      p {
+        margin: 0 0 16px;
+      }
+    }
+  }
+}
+
+@keyframes tab-pane {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

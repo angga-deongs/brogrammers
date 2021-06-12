@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'brogrammers-icon';
+  src:  url('../fonts/brogrammers-icon.eot?ydzhth');
+  src:  url('../fonts/brogrammers-icon.eot?ydzhth#iefix') format('embedded-opentype'),
+    url('../fonts/brogrammers-icon.ttf?ydzhth') format('truetype'),
+    url('../fonts/brogrammers-icon.woff?ydzhth') format('woff'),
+    url('../fonts/brogrammers-icon.svg?ydzhth#brogrammers-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="bro-"], [class*=" bro-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'brogrammers-icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bro-close:before {
+  content: "\e900";
+}
+.bro-chevron-down:before {
+  content: "\e901";
+}
+.bro-chevron-left:before {
+  content: "\e902";
+}
+.bro-chevron-right:before {
+  content: "\e903";
+}
+.bro-down-arrow:before {
+  content: "\e904";
+}
+.bro-up-arrow:before {
+  content: "\e908";
+}
+.bro-left-arrow:before {
+  content: "\e905";
+}
+.bro-right-arrow:before {
+  content: "\e906";
+}
+.bro-search:before {
+  content: "\e907";
+}

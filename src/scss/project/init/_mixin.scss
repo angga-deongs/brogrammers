@@ -1,0 +1,45 @@
+// Clearfix
+@mixin clearfix {
+  &::after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Responsive
+@mixin large {
+  @media screen and (max-width: $large) {
+    @content;
+  }
+}
+
+@mixin r-cus {
+  @media screen and (max-width: $custom) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (max-width: $medium) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: $small) {
+    @content;
+  }
+}
+
+@mixin extra-small {
+  @media screen and (max-width: $extra-small) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media screen and (max-width: $retina) {
+    @content;
+  }
+}

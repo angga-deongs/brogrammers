@@ -1,0 +1,29 @@
+.header
+  .container
+    .header__nav
+      .header__logo
+        a(href='index.html')
+          img(src='assets/img/logo/logo.svg' alt='logo')
+      .header__nav-menu
+        ul.header__nav-list
+          li.header__nav-item
+            a.header__nav-link(href='#home' class=(menu == 'home' ? 'header__active' : '')) Home
+          li.header__nav-item
+            a.header__nav-link(href='#tab' class=(menu == 'tab' ? 'header__active' : '')) Tabs
+          li.header__nav-item
+            a.header__nav-link(href='#accordion' class=(menu == 'accordion' ? 'header__active' : '')) Accordion
+          li.header__nav-item
+            a.header__nav-link(href='#toast' class=(menu == 'toast' ? 'header__active' : '')) Toast
+          //- li.header__nav-item
+          //-   a.header__nav-link(href='#tooltips' class=(menu == 'tooltips' ? 'header__active' : '')) Tooltips
+          li.header__nav-item
+            a.header__nav-link(href='#dropdown' class=(menu == 'dropdown' ? 'header__active' : '')) Dropdown
+          li.header__nav-item
+            a.header__nav-link(href='#modal' class=(menu == 'modal' ? 'header__active' : '')) Modal
+          li.header__nav-item
+            a.header__nav-link(href='#carousel' class=(menu == 'carousel' ? 'header__active' : '')) Carousel
+      .header__circle-menu
+      button.header__burger-menu.js-burger-menu(type='button')
+        span.menu-bar
+        span.menu-bar
+        span.menu-bar

@@ -1,0 +1,12 @@
+.main-section(id='carousel')
+  .container
+    .main-section__head-left
+        h2.main-section__title Feature Carousel
+  .main-product
+    .container
+      .main-product__wrapper
+        .main-product__content
+          .card__slider.owl-carousel.js-card-slider
+            each val in data
+              - data = val;
+              include ../../components/card.pug

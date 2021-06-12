@@ -1,0 +1,47 @@
+.toast {
+  position: fixed;
+  bottom: 24px;
+  width: 100%;
+  z-index: 9;
+  &-show {
+    display: block;
+  }
+  &__content {
+    position: relative;
+    width: 80%;
+    padding: 16px 24px;
+    width: 100%;
+    overflow: hidden;
+    background-color: $primary;
+    color: $white;
+    border-radius: 8px;
+    box-shadow: 4px 0 20px -5px rgba( 0, 0, 0, 0.4 );
+  }
+  &__desc {
+    padding-right: 16px;
+    font-size: $f-sm;
+    color: inherit;
+    margin: 0;
+  }
+  &__btn-toast {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    z-index: 10;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+    outline: 0;
+    padding: 7px 4px;
+    width: 28px;
+    height: 28px;
+    font-size: $f-xs;
+    border: 1px solid $white;
+    border-radius: 50%;
+    font-weight: 300;
+    cursor: pointer;
+  }
+}
